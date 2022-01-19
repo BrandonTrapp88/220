@@ -11,17 +11,17 @@ I certify that this assignment is entirely my own work.
 
 
 def calc_rec_area():
-    #ask user for the different mesurements
+    #ask user for the different measurements
     length = eval(input("Enter the length: "))
     width = eval(input("Enter the width: "))
-    # area = length muliplied by the width
+    # area = length multiplied by the width
     area = length * width
     #post answer for the user
     print("Area = ",area)
 
 
 def calc_volume():
-    #ask user for the different mesurements
+    #ask user for the different measurements
     length = eval(input("Enter the length: "))
     width = eval(input("Enter the width: "))
     height = eval(input("Enter the height: "))
@@ -36,7 +36,7 @@ def shooting_percentage():
     #ask user for the for the total shots taking and the total shots made
     total_Shots = eval(input("Enter the player total shots: "))
     shots_Made = eval(input("Enter how many shots the player made: "))
-    #calculate the percentage and muliply that by 100 to covert the decimal to percetage.
+    #calculate the percentage and multiply that by 100 to covert the decimal to percentage.
     percentage = shots_Made / total_Shots
     new_Percentage = percentage * 100
     #display user shooting percentage
