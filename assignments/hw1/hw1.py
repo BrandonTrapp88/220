@@ -62,10 +62,10 @@ def kilometers_to_miles():
     #ask user for how many kilometers they drove
     kilometers_Driven = eval(input("How many kilometers did you drive: "))
     #covert kilometers to miles
-    covert = 1.61
-    miles = kilometers_Driven / covert
+    miles = kilometers_Driven / 1.61
     #display to miles to user
     print("you drove",miles, "miles ")
+
 
 
 
