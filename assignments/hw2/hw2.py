@@ -14,13 +14,13 @@ import math
 
 def sum_of_threes():
     #setting a variable of sum  to 0. This stores my numbes in my for loop
-    sum = 0
+    total = 0
     #gets the upper bound number from user.
     upper_bound = eval(input("Enter the upper bound number: "))
     #loop that goes through the upperbound, starting at the number 3 by 3's
     for i in range(3,upper_bound+1,3):
-        sum = i+sum
-    print("sum of threes is: ", sum)
+        total = i+total
+    print("sum of threes is: ", total)
 
 
 
@@ -51,11 +51,11 @@ def sum_squares():
     #getting the numbers from user to square
     lower_range = eval(input("Enter the lower range: "))
     upper_range = eval(input("Enter the upper range: "))
-    sum = 0
+    total = 0
     #going through the variables storing the answer in the sum variable
     for i in range(lower_range, upper_range+1):
-        sum = (i * i ) + sum
-    print(sum)
+        total = (i * i ) + total
+    print(total)
 
 
 
