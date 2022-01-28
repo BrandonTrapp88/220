@@ -13,7 +13,7 @@ import math
 
 
 def sum_of_threes():
-    #setting a variable of sum  to 0. This stores my numbes in my for loop
+    #setting a variable of sum  to 0. This stores my numbers in my for loop
     total = 0
     #gets the upper bound number from user.
     upper_bound = eval(input("Enter the upper bound number: "))
@@ -37,7 +37,7 @@ def multiplication_table():
 
 
 def triangle_area():
-    #getting the messurements for the sides of the triangle
+    #getting the measurements for the sides of the triangle
     side_a = eval(input("Enter a value for side a: "))
     side_b = eval(input("Enter a value for side b: "))
     side_c = eval(input("Enter a value for side c: "))
