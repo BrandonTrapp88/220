@@ -54,7 +54,7 @@ def sum_squares():
     sum = 0
     #going through the variables storing the answer in the sum variable
     for i in range(lower_range, upper_range+1):
-        sum = (i **2) + sum
+        sum = (i * i ) + sum
     print(sum)
 
 
@@ -63,10 +63,13 @@ def power():
     #getting the base and exponent from the user.
     base = eval(input("Enter the base: "))
     exponent = eval(input("Enter the exponent: "))
+    answer = 1
     #creating the answer
-    answer = base ** exponent
+    for i in range(exponent):
+        answer = (base * answer)
     #displaying the answer
     print(base,"^", exponent, " = ", answer)
+
 
 if __name__ == '__main__':
     pass
