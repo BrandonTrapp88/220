@@ -1,5 +1,5 @@
 """
-Name: Brandon Tra--
+Name: Brandon Trapp
 hw2.py
 
 Problem: creating different functions using import math
