@@ -1,16 +1,16 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Brandon Trapp
+hw4.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: Solve issues using graphics.py
 
 Certification of Authenticity:
 <include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
-
+import math
 from graphics import *
+
 
 
 def squares():
@@ -27,37 +27,108 @@ def squares():
     instructions = Text(inst_pt, "Click to move circle")
     instructions.draw(win)
 
-    # builds a circle
-    shape = Circle(Point(50, 50), 20)
-    shape.setOutline("red")
-    shape.setFill("red")
-    shape.draw(win)
-
+    # builds a square
+    square = Rectangle(Point(100,100), Point(50,50))
+    square.setOutline("red")
+    square.draw(win)
     # allows the user to click multiple times to move the circle
     for i in range(num_clicks):
         click = win.getMouse()
-        center = shape.getCenter()  # center of circle
+        center = square.getCenter()# center of circle
+        new_square =square.clone()
+        new_square.draw(win)
+
+
 
         # move amount is distance from center of circle to the
         # point where the user clicked
         change_x = click.getX() - center.getX()
         change_y = click.getY() - center.getY()
-        shape.move(change_x, change_y)
-
+        square.move(change_x, change_y)
+    new_inst_pt = Point(width / 2, height - 200)
+    new_instructions = Text(new_inst_pt, "Click to exit")
+    new_instructions.draw(win)
     win.getMouse()
-    win.close()
+
 
 
 def rectangle():
-    pass
+    width = 400
+    height = 400
+    win = GraphWin("Draw a Rectangle", width,height)
+    inst_pt = Point(width / 2, height - 10)
+    instruction = Text(inst_pt, "Click two places to draw a rectangle.")
+    instruction.draw(win)
+    p1 = win.getMouse()
+
+    p2 = win.getMouse()
+
+
+    rec_width = math.fabs((p1.getX()-p2.getX()))
+    rec_height = math.fabs((p1.getY()-p2.getY()))
+    area = rec_width * rec_height
+    per = 2*(rec_width+rec_height)
+
+
+    rec = Rectangle(p1,p2)
+    rec.setOutline("Red")
+    rec.setFill("Red")
+    rec.draw(win)
+    instruction.undraw()
+    area_answer = Text(inst_pt, "Area: " +str(area), )
+    area_answer.draw(win)
+
+    inst_pt2 = Point(width/2, height - 40)
+    per_answer = Text(inst_pt2, "Perimeter: " +str(per))
+    per_answer.draw(win)
+    win.getMouse()
+
+
+
+
 
 
 def circle():
-    pass
+    width = 400
+    height = 400
+    win = GraphWin("Draw a Circle", width, height)
+    inst_pt = Point(width / 2, height - 10)
+    instruction = Text(inst_pt, "Click to draw a circle")
+    instruction.draw(win)
+
+    p1 = win.getMouse()
+    p2 = win.getMouse()
+    cirx = (p2.getX()-p1.getX())**2
+    ciry =  (p2.getY()-p1.getY())**2
+
+    radius = math.sqrt(cirx+ciry)
+    cir_shape = Circle(p1, radius)
+    cir_shape.draw(win)
+
+    radius_answer = Text(inst_pt, "The Radius is: "+str(radius))
+    instruction.undraw()
+    radius_answer.draw(win)
+
+    win.getMouse()
+
+
+
+
+
+
 
 
 def pi2():
-    pass
+    #This problem is not complete.
+    num = eval(input("Please enter the number"))
+    answer = 0
+    for i in range(1,num+1,2):
+        answer = answer + (4/i - 4/(i + 2))
+    print(answer)
+pi2()
+
+
+
 
 
 if __name__ == '__main__':
