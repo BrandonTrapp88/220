@@ -24,12 +24,13 @@ def squares():
 
     # create a space to instruct user
     inst_pt = Point(width / 2, height - 10)
-    instructions = Text(inst_pt, "Click to move circle")
+    instructions = Text(inst_pt, "Click to add more squares")
     instructions.draw(win)
 
     # builds a square
     square = Rectangle(Point(100,100), Point(50,50))
     square.setOutline("red")
+    square.setFill("red")
     square.draw(win)
     # allows the user to click multiple times to move the circle
     for i in range(num_clicks):
@@ -49,6 +50,7 @@ def squares():
     new_instructions = Text(new_inst_pt, "Click to exit")
     new_instructions.draw(win)
     win.getMouse()
+
 
 
 
@@ -110,7 +112,7 @@ def circle():
     radius_answer.draw(win)
 
     win.getMouse()
-
+circle()
 
 
 
@@ -125,7 +127,6 @@ def pi2():
     for i in range(1,num+1,2):
         answer = answer + (4/i - 4/(i + 2))
     print(answer)
-pi2()
 
 
 
