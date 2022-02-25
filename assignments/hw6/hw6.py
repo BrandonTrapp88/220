@@ -1,42 +1,90 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Brandon Trapp
+hw6.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: Solve different functions using format, and return
 
 Certification of Authenticity:
 <include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
+
 """
 
+import math
 
 def cash_converter():
-    pass
+
+   cash = eval(input("Enter a number: "))
+   answer = ("That is ${:.2f}dollars.".format(cash))
+   print(answer)
 
 
 def encode():
-    pass
+    sentence = input("Please Enter a sentence: ")
+    key = eval(input("Enter a key: "))
+    answer = ""
+
+    for i in sentence:
+        new_sentence2 =ord(i)+ key
+        answer = answer +chr(new_sentence2)
+    print(answer)
 
 
-def sphere_area(radius):
-    pass
+
+
+
+def sphere_area(radius: float):
+    
+    area = 4*((radius**2)*math.pi)
+    return area
+
 
 
 def sphere_volume(radius):
-    pass
+    volume = 4/3 * (math.pi * (radius**3))
+    return volume
 
 
 def sum_n(number):
-    pass
+    answer = 0
+    for i in range(1,number+1):
+        answer = answer+i
+    return (answer)
 
 
 def sum_n_cubes(number):
-    pass
+    answer = 0
+    for i in range(1,number+1):
+        answer = answer + (i**3)
+    return answer
 
 
 def encode_better():
-    pass
+    sentence = input("Enter a sentence: ")
+    key = input("Enter a key: ")
+
+    answer = ""
+
+    for i in range(len(sentence)):
+        message = ord(sentence[i]) - 65
+        new_key = ord(key[i % len(key)]) - 65
+        new_message = (message+new_key) % 58
+        new_message = new_message +65
+        answer = answer+chr(new_message)
+    print(answer)
+
+
+
+
+
+
+
+
+        
+
+
+
+
 
 
 if __name__ == '__main__':
