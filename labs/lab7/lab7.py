@@ -34,5 +34,5 @@ def weighted_average(in_file_name,out_file_name):
 
 def main():
     #This part of the instructions confused me hope its right.
-    weighted_average("grades.txt","love.txt")
+    weighted_average("grades.txt","avg.txt")
 main()
