@@ -42,9 +42,7 @@ def hourly_wages(in_file_name, out_file_name):
         print(answer,file=output)
 
 def calc_check_sum(isbn):
-    numbers = isbn.replace("-","")
-    number = list(numbers)
-    total = 0
+    pass
 
 
 
