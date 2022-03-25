@@ -92,16 +92,16 @@ def play(board):
                fill_spot(board,player1,'x')
            else:
                print("Pick again")
-
+           print_board(board)
            player2 = eval(input("Player o, pick a spot with a number"))
            
-           print_board(board)
+
            if is_legal(board, player2) == True:
                fill_spot(board, player2, "o")
 
            else:
                print("pick again")
-       print_board(board)
+           print_board(board)
 
 
 def main():
