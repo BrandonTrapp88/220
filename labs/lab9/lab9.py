@@ -84,8 +84,9 @@ def play(board):
    print("Enter a number on the board to put an x or o into the spot. ")
    play = "y" or "Y"
    while play == "y" or "Y":
-       print_board(board)
+
        while game_over(board) == False:
+           print_board(board)
            player1 = eval(input("Player x, pick a spot with a number: "))
            if is_legal(board, player1) == True:
                fill_spot(board,player1,'x')
@@ -93,10 +94,15 @@ def play(board):
                print("Pick again")
 
            player2 = eval(input("Player o, pick a spot with a number"))
+           
+           print_board(board)
            if is_legal(board, player2) == True:
                fill_spot(board, player2, "o")
+
            else:
                print("pick again")
+       print_board(board)
+
 
 def main():
     play(build_board())
