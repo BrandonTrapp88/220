@@ -2,7 +2,7 @@
 Name: brandon trapp
 hw9.py
 
-Problem: Create a hangman game
+Problem: Create a hangman game.
 Certification of Authenticity:
 <include one of the following>
 I certify that this assignment is entirely my own work.
