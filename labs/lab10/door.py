@@ -47,3 +47,13 @@ class Door:
         self.label.setText(label)
     def color_door(self,color):
         self.shape.setFill(color)
+    def set_secret(self,secret):
+        self.secret = secret
+
+    def is_secret(self):
+        if self.secret:
+            return True
+        else:
+            return False
+
+
