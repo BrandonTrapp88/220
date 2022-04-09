@@ -1,4 +1,4 @@
-from graphics import Circle, Line
+from graphics import Circle, Line, Polygon
 
 
 class Face:
@@ -21,13 +21,16 @@ class Face:
         point_2 = center.clone()
         point_2.move(mouth_size / 2, mouth_off)
         self.mouth = Line(point_1, point_2)
+
+
         self.mouth.draw(window)
 
     def smile(self):
         pass
-
     def shock(self):
-        pass
+        self.mouth.undraw()
+        self.mouth = Circle(self.mouth.getCenter(), 15)
+        self.mouth.draw(self.window)
 
     def wink(self):
         pass

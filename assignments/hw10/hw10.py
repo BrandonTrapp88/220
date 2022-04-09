@@ -1,3 +1,16 @@
+"""
+Name: Brandon Trapp
+hw10.py
+
+Problem: solve different problems by setting up classes
+
+Certification of Authenticity:
+<include one of the following>
+I certify that this assignment is entirely my own work.
+
+"""
+from graphics import*
+from face import Face
 def fibonacci(n):
     if n < 1:
         return None
@@ -43,6 +56,7 @@ def goldbach(n):
 
     ticker = 0
     num_list = []
+
     if n % 2 == 0:
         number = n - 2
         new_number = n - number
@@ -52,7 +66,17 @@ def goldbach(n):
     else:
         return None
 
+def main():
 
+    win_width = 400
+    win_height = 400
+    win = GraphWin("Face", win_width, win_height)
+    win.setBackground("Blue")
+    center = Point(200,200)
 
+    face = Face(win,center , 100)
+    shock = face.shock()
+    wink = face.wink()
 
-
+    while win.getMouse() == False:
+        return  shock
